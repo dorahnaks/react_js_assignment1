@@ -1,32 +1,30 @@
 import React from 'react';
 import GreetingCard from './GreetingCard';
 import './GreetingCard.css';
+import InputForm from './form/InputForm'
+import TextareaForm from './form/TextAreaForm';
+import SelectForm from './form/SelectForm';
 
 function App() {
   return (
-     <div className='greetings-card'>
-        <GreetingCard  
-        name = 'Dorothy'
-        age = '21'
-        school = 'BRIGHT COLLEGE NANSANA'
-        address = 'Nansana'
-        />
+    <div>
+      <div className="card-container">
+        <GreetingCard name="JULIET" age={22}
+         school="ELITE" address="ENTEBBE" />
+        <GreetingCard name="DORAH" age={21}
+         school="OUR LADY" address="MUKONO" />
+        <GreetingCard name="WITNEY" age={22}
+        school="St. Mary's SS" address="Jinja" />
+      </div>
 
-        <GreetingCard  
-        name = 'Whitney'
-        age = '21'
-        school = 'MENGO SENIOR SCHOOL'
-        address = 'Mengo'
-        />
+      <InputForm/>
+      <TextareaForm/>
+      <SelectForm/>
 
-        <GreetingCard  
-        name = 'Julie'
-        age = '22'
-        school = 'BUDDO SS'
-        address = 'Masaka'
-        />
-    </div>
+    </div>    
   );
 }
+
+
 
 export default App;
